@@ -1,1 +1,1 @@
-# ClickyGame
+# Clicky - a memory game challenge.
