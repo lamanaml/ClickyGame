@@ -1,3 +1,4 @@
-ul.search-images img {
-  margin: 0 auto;
+ img {
+  margin: 15px;
+  width: 200px;
 }

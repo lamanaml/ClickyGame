@@ -3,13 +3,16 @@ import "./style.css";
 
 function ShowImages(props) {
   return (
-    <ul className="list-group search-images">
-      {props.images.map(images => (
-        <li key={images.largeImageURL} className="list-group-item">
-          <img alt={images.tags} src={images.largeImageURL} className="img-fluid" />
-        </li>
+    <div class="container">
+       
+      {props.images.map((images, i) => (
+        <span key={i} >
+          <img alt={images.tags} src={images.largeImageURL} />
+        </span>
+        
       ))}
-    </ul>
+      
+    </div>
   );
 }
 

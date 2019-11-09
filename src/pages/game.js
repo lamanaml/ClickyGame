@@ -1,7 +1,8 @@
 import React, { Component } from "react";
 import API from "../utilities/API";
-import Card from "../components/Card";
+// import Card from "../components/Card";
 import ShowImages from "../components/ShowImages";
+import Footer from "../components/Footer";
 
 class Game extends Component {
   state = {
@@ -64,13 +65,11 @@ class Game extends Component {
           <ShowImages images={this.state.images} />
 
             {/* // <Card images={this.state.images} handleBtnClick={this.handleBtnClick} /> */}
-        {/* <h1 className="text-center">
-          Made friends with {this.state.matchCount} pups so far!
-        </h1> */}
+      
         </div>
         
     );
-  }
+  }  <Footer />
 }
 
 export default Game;
