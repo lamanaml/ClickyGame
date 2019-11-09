@@ -13,6 +13,8 @@ function App() {
         <Wrapper>
           <Route exact path="/" component={Game} />
         </Wrapper>
+        
+        
         <Footer />
       </div>
     </Router>

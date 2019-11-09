@@ -1,5 +1,6 @@
 import React from "react";
 // import { Link } from "react-router-dom";
+import Alert from "../Alert";
 import "./style.css";
 
 // Depending on the current path, this component sets the "active" class on the appropriate navigation link item
@@ -12,7 +13,9 @@ function Navbar() {
       Clicky Game
     </div>
     <div class="col-sm">
-      You guessed incorrectly!
+     <Alert style={{ opacity: 0 ? 1 : 0 }} type="success">
+         You Guessed Correctly!
+        </Alert>
     </div>
     <div class="col-sm">
       Score: 0 | Top Score: 7
