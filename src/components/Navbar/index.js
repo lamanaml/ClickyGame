@@ -4,7 +4,7 @@ import Alert from "../Alert";
 import "./style.css";
 
 // Depending on the current path, this component sets the "active" class on the appropriate navigation link item
-function Navbar() {
+function Navbar({ score, topScore }) {
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-light">
       <div class="container">
@@ -18,7 +18,7 @@ function Navbar() {
         </Alert>
     </div>
     <div class="col-sm">
-      Score: 0 | Top Score: 7
+      SCORE: {score} | TOP SCORE: {topScore}
     </div>
   </div>
 </div>
