@@ -1,3 +1,4 @@
+
 import React, { Component } from "react";
 // import API from "../utilities/API";
 // import Container from "../components/Container";
@@ -102,7 +103,6 @@ shuffleImages = () => {
         </p>
        
 <Wrapper>
-
   
       { this.state.images.map((food) =>{
           return( 
@@ -117,16 +117,13 @@ shuffleImages = () => {
         )}
         )
       }
-
     
       
     </Wrapper>
-
   
   </div>  
     );
   } 
 }
-
-
 export default Game;
+
