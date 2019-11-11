@@ -8,8 +8,7 @@ function App() {
   return (
     <Router>
       <div>
-        <Navbar />
-     
+        
           <Route exact path="/" component={Game} />
         
         <Footer />

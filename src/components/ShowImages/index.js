@@ -16,7 +16,6 @@ function ShowImages(props) {
 }
 
 
-<img src={props.image}     /> 
 export default ShowImages;
 
 

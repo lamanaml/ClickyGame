@@ -14,9 +14,10 @@ class Game extends Component {
     message: "Ready to Play",
   };
 
-   // componentDidMount() {
-  //   this.shuffleImages();
-  // }
+
+   componentDidMount() {
+    this.shuffleImages();
+  }
 
    
 
@@ -45,8 +46,8 @@ class Game extends Component {
   // }
 
 // onImageClick = (index) => {
-//         const shuffleArr = this.shuffleImages(this.images);
-//         this.setState({images: shuffleArr});
+//         const shuffled = this.shuffleImages(this.images);
+//         this.setState({images: shuffled});
         
 //         if(!this.state.click.includes(index)) {
 //           this.state.click.push(index)
@@ -76,15 +77,16 @@ class Game extends Component {
 //         this.shuffleImages();
 //       }
     
-// shuffleImages = food => {
-//     for (let i = food.length - 1; i > 0; i--) {
-//       const j = Math.floor(Math.random() * (i + 1));
-//       [food[i], food[j]] = [food[j], food[i]];
-//     }
-//     this.setState({
-//           images: this.shuffleArr
-//   })
-//   }
+shuffleImages = () => {
+   let shuffled = this.state.images;
+    for (let i = shuffled.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+    }
+    this.setState({
+          images: shuffled
+  })
+  }
 
   render() {
     return (
@@ -96,6 +98,8 @@ class Game extends Component {
         </p>
         
 <Wrapper>
+
+  
       { 
         images.map((food, i) => (
           <ShowImages
@@ -106,27 +110,13 @@ class Game extends Component {
             
           />
         ))}
+
+    
       
     </Wrapper>
 
-
-
-    <Wrapper>
-      { 
-        images.map((food, i) => (
-          <ShowImages
-            key={food.id}
-            id={i.id}
-            image={food.largeImageURL}
-            alt={food.tags}
-            
-          />
-        ))}
-      
-    </Wrapper>
-
-
-     </div>  
+  
+  </div>  
     );
   } 
 }
