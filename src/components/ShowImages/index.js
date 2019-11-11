@@ -9,7 +9,7 @@ function ShowImages(props) {
         <img 
           src={props.image} 
           onClick={()=> props.onImageClick(props.id)}  
-          alt="" /> 
+          alt={props.id} /> 
       </button>
 
   );
