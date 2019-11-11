@@ -1,4 +1,31 @@
 .wrapper {
-  min-height: 100%;
-  padding-bottom: 100px;
+    box-sizing: border-box;
+    margin: 0 auto;
+    padding-top: 50px;
+    height: 100%;
+    width:60%;
+    display: flex;
+    flex-flow: row wrap;
+    padding: 20px;
+    justify-content: space-around;
+    align-content: flex-start;
+    overflow: auto;
+  }
+
+.wrapperShake {
+  box-sizing: border-box;
+  margin: 0 auto;
+  padding-top: 50px;
+  height: 100%;
+  width:60%;
+  display: flex;
+  flex-flow: row wrap;
+  padding: 20px;
+  justify-content: space-around;
+  align-content: flex-start;
+  overflow: auto;
+    /* Start the shake animation and make the animation last for 0.5 seconds */
+    
+    animation: shake 0.5s;
+    animation-iteration-count: 5s;
 }

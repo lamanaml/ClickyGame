@@ -1,23 +1,22 @@
 import React from "react";
 import "./style.css";
-import ImgBtn from "../ImgBtn";
 
-/
+
 function ShowImages(props) {
   return (
-    <div class="container">
-       
-      {props.images.map((images, i) => (
-        <span key={i} >
-          <img alt={images.tags} src={images.largeImageURL} />
-        </span>
-         
-      />
-      ))}
-     
 
-    </div>
+      <button>  
+        <img 
+          src={props.image} 
+          onClick={()=> props.onImageClick(props.id)}  
+          alt="" /> 
+      </button>
+
   );
 }
 
+
+<img src={props.image}     /> 
 export default ShowImages;
+
+
