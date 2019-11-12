@@ -7,6 +7,7 @@ import Wrapper from "../components/Wrapper";
 import images from "../images.json";
 import Navbar from "../components/Navbar";
 import "../App.css";
+// import Example from "../components/Example";
 
 class Game extends Component {
     constructor(props) {
@@ -48,6 +49,7 @@ class Game extends Component {
       this.setState({
         message: "You won the game!"
       });
+
   }
 
 onImageClick = (id) => {
@@ -93,8 +95,13 @@ shuffleImages = () => {
 
   render() {
     return (
+
+
       
         <div >
+
+   {/* <Example /> */}
+
            <Navbar 
           score={this.state.score}
           topScore={this.state.topScore}
@@ -106,7 +113,7 @@ shuffleImages = () => {
         </p>
        
 <Wrapper>
-  
+   
       { this.state.images.map((food) =>{
           return( 
           <ShowImages
@@ -125,8 +132,9 @@ shuffleImages = () => {
     </Wrapper>
   
   </div>  
-    );
-  } 
+
+     )}
 }
+
 export default Game;
 
