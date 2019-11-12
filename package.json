@@ -1,52 +1,35 @@
 {
   "name": "clickygame",
-  "version": "0.1.0",
-  "private": true,
-  "engines": {
-    "node": "v10.16.0"
-  },
-  "dependencies": {
-    "animate.css": "^3.7.2",
-    "axios": "^0.19.0",
-    "bootstrap": "^4.3.1",
-    "react": "^16.11.0",
-    "react-bootstrap": "^1.0.0-beta.14",
-    "react-dom": "^16.11.0",
-    "react-router-dom": "^5.1.2",
-    "react-scripts": "3.2.0"
-  },
+  "version": "1.0.0",
+  "description": "Challenge yourself to a React Memory game. Click on a food image to start the game.  The images will be reshuffled.  If your next click is a new image, you get a point.  If you forget, and click an image that you have already clicked... You lose the game.\r Choose 12 unique images in a row and you win the game!",
+  "homepage": "http://clickygame/herokuapp.com",
+  "main": "server.js",
   "scripts": {
-    "start": "node index.js",
-    "heroku-postbuild": "cd client && npm install && npm run build",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+
+    "start": "if-env NODE_ENV=production && npm run start:prod || npm run start:dev",
+    "start:prod": "node server.js",
+    "start:dev": "concurrently \"nodemon --ignore 'client/*'\" \"npm run client\"",
+    "client": "cd client && npm run start",
+    "install": "cd client && npm install",
+    "build": "cd client && npm run build",
+    "heroku-postbuild": "npm run build"
   },
-  "eslintConfig": {
-    "extends": "react-app"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lamanaml/ClickyGame.git"
   },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  },
-  "description": "Challenge yourself to a React Memory game",
-  "main": "index.js",
-  "devDependencies": {},
-  "repository": "git+https://github.com/lamanaml/ClickyGame.git",
-  "author": "lamana <lamanaml@gmail.com>",
+  "author": "",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/lamanaml/ClickyGame/issues"
   },
   "homepage": "https://github.com/lamanaml/ClickyGame#readme",
-  
-  "proxy": "http://localhost:3000"
+  "dependencies": {
+    "concurrently": "^5.0.0",
+    "env": "0.0.2",
+    "express": "^4.17.1",
+    "if-env": "^1.0.4",
+    "nodemon": "^1.19.4",
+    "path": "^0.12.7"
+  }
 }
