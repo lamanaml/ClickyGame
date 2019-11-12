@@ -16,8 +16,7 @@
     "react-scripts": "3.2.0"
   },
   "scripts": {
-    "start": "react-scripts start",
-     "start": "node index.js",
+    "start": "node index.js",
     "heroku-postbuild": "cd client && npm install && npm run build",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -47,5 +46,7 @@
   "bugs": {
     "url": "https://github.com/lamanaml/ClickyGame/issues"
   },
-  "homepage": "https://github.com/lamanaml/ClickyGame#readme"
+  "homepage": "https://github.com/lamanaml/ClickyGame#readme",
+  
+  "proxy": "http://localhost:3000"
 }
