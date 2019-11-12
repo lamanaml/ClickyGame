@@ -6,18 +6,19 @@ import ShowImages from "../components/ShowImages";
 import Wrapper from "../components/Wrapper";
 import images from "../images.json";
 import Navbar from "../components/Navbar";
+import "../App.css";
 
 class Game extends Component {
     constructor(props) {
     super(props);
-  this.state = {
-    images : images,
-    click: [],
-    topScore: 0,
-    score: 0,
-    message: "Ready to Play",
+    this.state = {
+      images : images,
+      click: [],
+      topScore: 0,
+      score: 0,
+      message: "Select an image to begin.",
+    };
   };
-    }
 
    componentDidMount() {
     this.shuffleImages();
@@ -30,7 +31,7 @@ class Game extends Component {
       this.setState({
           score: 0,
           click: [],
-          message: "Click a card to begin!"
+          message: "Click an to begin!"
       });
       this.shuffleImages();
   }
@@ -59,7 +60,7 @@ onImageClick = (event) => {
       } else {
           this.state.click.push(event.id);
           let score = this.state.score + 1;
-          let topScore = score > this.state.topScore ? score : this.state.topScore;
+          let topScore = score > this.state.topScore ? score : this.state.score;
           this.setState({
               score,
               topScore,
@@ -97,9 +98,9 @@ shuffleImages = () => {
           topScore={this.state.topScore}
           message={this.state.message}
         />
-        < p class="jumbotron jumbotron-fluid">
-          <h1 class="display-4">Clicky Game!</h1>
-          <p > Click on an image to earn points, but don't click on any more than once!</p>
+        < p class="jumbotron jumbotron-fluid background1">
+          <h1 class="display-4 ">Clicky Game!</h1>
+          <p class="display-5 "> Click on an image to earn points, but don't click on any more than once!</p>
         </p>
        
 <Wrapper>

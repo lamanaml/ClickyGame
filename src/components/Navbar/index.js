@@ -3,7 +3,8 @@ import "./style.css";
 
 function Navbar(props) {
   return (
-    <nav className="navbar navbar-expand-lg navbar-light bg-light">
+    <nav className="navbar navbar-expand-lg navbar-light bg-light" >
+ 
      <div class="container">
        <div class="row">
           <div className="col-sm-4">Clicky Game </div>
@@ -13,6 +14,6 @@ function Navbar(props) {
       </div >
     </nav>
   );
-}
+} 
 
 export default Navbar;

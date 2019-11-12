@@ -20,3 +20,21 @@
 .App-link {
   color: #09d3ac;
 }
+
+
+.background1 {
+  background-image: url('http://cdn.backgroundhost.com/backgrounds/subtlepatterns/escheresque_ste.png');
+ background-repeat: repeat;
+}
+
+.display-4 {
+  color: white;
+  margin-left:50px;
+  font-family: aladin, sans-serif;
+}
+
+.display-5 {
+  color: white;
+  margin-left:50px;
+}
+
