@@ -50,10 +50,10 @@ class Game extends Component {
       });
   }
 
-onImageClick = (event) => {
+onImageClick = (id) => {
   
-    if (this.state.images.includes(event.id) && images.id === event.id) {
-        console.log(event.id)
+    if (this.state.click.includes(id)) {
+        console.log(id)
         console.log("lose game")
           this.loseGame();
           this.setState({
@@ -62,13 +62,13 @@ onImageClick = (event) => {
           });
       } 
       else {
-          this.state.click.push(event.id);
+          this.state.click.push(id);
           let score = this.state.score + 1;
           let topScore = score > this.state.topScore ? score : this.state.score;
           this.setState({
               score,
               topScore,
-              message: "You guessed Correctly!"
+              message: "You guessed correctly!"
           });
           if (this.state.click.length === 12) {
               this.winGame();
