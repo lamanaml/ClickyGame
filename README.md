@@ -9,7 +9,7 @@ Choose 12 unique images in a row and you win the game!
 
 
 ## Deployed on Heroku
-https://webscraperld.herokuapp.com/
+https://clickygameld.herokuapp.com/
 
 ## Deployed on Nelify 
 https://laughing-wright-1976ad.netlify.com/
