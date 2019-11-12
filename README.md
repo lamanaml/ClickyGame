@@ -9,3 +9,9 @@ https://sleepy-peak-36033.herokuapp.com/
 
 ## Deployed on Nelify 
 https://laughing-wright-1976ad.netlify.com/
+
+## Style
+Animate.css
+Bootstrap
+Adobe Edge Web Fonts
+http://backgroundhost.com/

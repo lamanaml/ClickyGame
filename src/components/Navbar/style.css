@@ -1,5 +1,50 @@
-nav.navbar.navbar-default {
-  margin-bottom: 0;
-  
+.navbar {
+    height:50px;
+    background:orange;
+    min-height: 50px;
+    position: fixed;
+    width: 100%;
+    color: #fff;
+    z-index: 99;
+    white-space: nowrap;
+    font-size: 20px;
 }
+  
+.navbar li{
+    display: inline-block;
+  }
+  
+.navbar  li {
+    color: white;
+    text-decoration: none;
+    
+
+  }
+
+ul{
+    width:100%;
+    padding-right:0px;
+    padding-left:0px;
+}
+
+.title{
+    padding-right:0px;
+    margin-right:0px;
+}
+
+.navbar{
+    padding-right:0px;
+    padding-left:0px;
+}
+
+.navbar ul {
+    margin: 0;
+  }
+
+li{
+    width:33%;
+    text-align: center;
+}
+
+
 

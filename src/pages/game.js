@@ -39,7 +39,7 @@ class Game extends Component {
   // Function for if the user loses the game
   loseGame = () => {
       this.setState({
-        message: "Loser!"
+        message: "You lost the game!"
       });
   }
 
@@ -51,13 +51,17 @@ class Game extends Component {
   }
 
 onImageClick = (event) => {
-      if (this.state.click.includes(event.id)) {
+  
+    if (this.state.images.includes(event.id) && images.id === event.id) {
+        console.log(event.id)
+        console.log("lose game")
           this.loseGame();
           this.setState({
             click: [],
             score: 0
           });
-      } else {
+      } 
+      else {
           this.state.click.push(event.id);
           let score = this.state.score + 1;
           let topScore = score > this.state.topScore ? score : this.state.score;
@@ -84,9 +88,7 @@ shuffleImages = () => {
       const j = Math.floor(Math.random() * (i + 1));
       [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
     }
-    this.setState({
-          images: shuffled
-  })
+    this.setState({ images: shuffled  })
   }
 
   render() {
