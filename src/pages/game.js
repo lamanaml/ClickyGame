@@ -45,7 +45,7 @@ class Game extends Component {
   // function for if the user wins the game
   winGame = () => {
       this.setState({
-        message: "Winner!"
+        message: "You won the game!"
       });
   }
 
@@ -63,7 +63,7 @@ onImageClick = (event) => {
           this.setState({
               score,
               topScore,
-              message: "Good choice!"
+              message: "You guessed Correctly!"
           });
           if (this.state.click.length === 12) {
               this.winGame();

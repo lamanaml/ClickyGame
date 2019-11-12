@@ -2,9 +2,10 @@
   "name": "clickygame",
   "version": "0.1.0",
   "private": true,
+  
   "engines": {
     "node": "v10.16.0"
-    },
+  },
   "dependencies": {
     "axios": "^0.19.0",
     "react": "^16.11.0",
@@ -12,7 +13,7 @@
     "react-router-dom": "^5.1.2",
     "react-scripts": "3.2.0"
   },
-  "scripts": {
+   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -33,14 +34,11 @@
       "last 1 safari version"
     ]
   },
-  "description": "",
+  "description": "Challenge yourself to a React Memory game",
   "main": "index.js",
   "devDependencies": {},
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/lamanaml/ClickyGame.git"
-  },
-  "author": "",
+  "repository": "git+https://github.com/lamanaml/ClickyGame.git",
+  "author": "lamana <lamanaml@gmail.com>",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/lamanaml/ClickyGame/issues"
